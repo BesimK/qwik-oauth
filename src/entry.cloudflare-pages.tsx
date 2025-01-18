@@ -17,10 +17,15 @@ import render from "./entry.ssr";
 
 declare global {
   interface QwikCityPlatform extends PlatformCloudflarePages {
-    env: Env
+    env: Env;
   }
 }
 
-const fetch = createQwikCity({ render, qwikCityPlan, manifest });
+const fetch = createQwikCity({
+  render,
+  qwikCityPlan,
+  manifest,
+  checkOrigin: false,
+});
 
 export { fetch };
