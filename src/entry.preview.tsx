@@ -18,7 +18,7 @@ import render from "./entry.ssr";
 /**
  * The default export is the QwikCity adapter used by Vite preview.
  */
-const { router, notFound, staticFile } = createQwikCity({
+export const { router, notFound, staticFile } = createQwikCity({
   render,
   qwikCityPlan,
   checkOrigin: false,
